@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit Artwork - PicVerse</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/submission.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <a href="../index.html">PicVerse</a>
+      </div>
+      <div class="nav-menu">
+        <a href="../index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="submission.html" class="active">Submission</a>
+        <a href="community.html">Community</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <main class="submission-container">
+      <section class="submission-header">
+        <h1>Add Your Art</h1>
+        <p>Share your art with the world. It's fast, simple, and free.</p>
+      </section>
+
+      <section class="submission-form-container">
+        <form id="artSubmissionForm" class="submission-form">
+          <div class="form-grid">
+            <div class="form-section">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="email@example.com"
+                  required
+                />
+                <span class="error-message" id="emailError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="title">Title</label>
+                <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  placeholder="Enter a title for your art"
+                  required
+                />
+                <span class="error-message" id="titleError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="description">Description</label>
+                <textarea
+                  id="description"
+                  name="description"
+                  rows="4"
+                  placeholder="Tell us a bit about your art..."
+                  required
+                ></textarea>
+                <span class="error-message" id="descriptionError"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="tags">Tags</label>
+                <input
+                  type="text"
+                  id="tags"
+                  name="tags"
+                  placeholder="Add tags to help describe your art (comma-separated)"
+                  required
+                />
+                <span class="error-message" id="tagsError"></span>
+              </div>
+
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="radio" name="isAiGenerated" value="yes" />
+                  <span class="radio-custom"></span>
+                  This is AI-generated artwork
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="isAiGenerated" value="no" checked />
+                  <span class="radio-custom"></span>
+                  This is not AI-generated artwork
+                </label>
+                <span class="error-message" id="aiGeneratedError"></span>
+              </div>
+            </div>
+
+            <div class="form-section">
+              <div class="upload-container">
+                <div class="upload-area" id="uploadArea">
+                  <div class="upload-content">
+                    <img
+                      src="../assets/images/upload-icon.svg"
+                      alt="Upload"
+                      id="previewImage"
+                    />
+                    <p>Drag and drop your file here or</p>
+                    <button
+                      type="button"
+                      class="btn-secondary"
+                      id="uploadButton"
+                    >
+                      Choose File
+                    </button>
+                    <input
+                      type="file"
+                      id="fileInput"
+                      name="artwork"
+                      accept="image/*"
+                      hidden
+                      required
+                    />
+                  </div>
+                </div>
+                <span class="error-message" id="fileError"></span>
+                <div class="upload-requirements">
+                  <h4>Upload Requirements:</h4>
+                  <ul>
+                    <li>Maximum file size: 20MB</li>
+                    <li>Supported formats: PNG, JPG, JPEG</li>
+                    <li>Minimum dimensions: 1000x1000px</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Upload Artwork</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>PicVerse</h3>
+          <p>A new world of art creation and appreciation</p>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>Navigation</h4>
+            <a href="../index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="submission.html">Submission</a>
+            <a href="community.html">Community</a>
+            <a href="about.html">About Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 PicVerse. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/submission.js"></script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - PicVerse</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/gallery.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <a href="../index.html">PicVerse</a>
+      </div>
+      <div class="nav-menu">
+        <a href="../index.html">Home</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="submission.html">Submission</a>
+        <a href="community.html">Community</a>
+        <a href="about.html">About Us</a>
+      </div>
+      <div class="nav-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <main>
+      <section class="gallery-header">
+        <h1>Gallery</h1>
+        <p>Explore and discover art from artists all over the world</p>
+      </section>
+
+      <section class="gallery-tags">
+        <div class="tags-scroll">
+          <button class="tag active">Digital Art</button>
+          <button class="tag">Illustration</button>
+          <button class="tag">Pixel Art</button>
+          <button class="tag">Fan Art</button>
+          <button class="tag">Abstract</button>
+          <button class="tag">Character Design</button>
+          <button class="tag">Anime</button>
+          <button class="tag">Concept Art</button>
+          <button class="tag">Gaming</button>
+          <button class="tag">3D Art</button>
+        </div>
+      </section>
+
+      <section class="gallery-grid">
+        <!-- Gallery items will be populated by JavaScript -->
+      </section>
+
+      <div class="pagination">
+        <button class="prev-page">❮</button>
+        <div class="page-numbers">
+          <button class="active">1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+          <button>5</button>
+        </div>
+        <button class="next-page">❯</button>
+      </div>
+    </main>
+
+    <!-- Modal for artwork details -->
+    <div class="artwork-modal" id="artworkModal">
+      <div class="modal-content">
+        <button class="modal-close">&times;</button>
+        <div class="modal-body">
+          <div class="artwork-image">
+            <img src="" alt="Artwork" />
+          </div>
+          <div class="artwork-details">
+            <h2 class="artwork-title"></h2>
+            <p class="artwork-artist"></p>
+            <div class="artwork-stats">
+              <span class="likes"></span>
+              <span class="views"></span>
+            </div>
+            <div class="artwork-description"></div>
+            <div class="artwork-tags"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>PicVerse</h3>
+          <p>A new world of art creation and appreciation</p>
+        </div>
+        <div class="footer-links">
+          <div class="link-group">
+            <h4>Navigation</h4>
+            <a href="../index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="submission.html">Submission</a>
+            <a href="community.html">Community</a>
+            <a href="about.html">About Us</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 PicVerse. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/gallery.js"></script>
+  </body>
+</html>
