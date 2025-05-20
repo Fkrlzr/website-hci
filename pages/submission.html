@@ -85,15 +85,27 @@
               </div>
 
               <div class="form-group">
-                <label class="checkbox-label">
-                  <input
-                    type="checkbox"
-                    name="isAiGenerated"
-                    id="isAiGenerated"
-                  />
-                  <span class="checkbox-custom"></span>
-                  This is AI-generated artwork
-                </label>
+                <label>Is this AI generated?</label>
+                <div class="radio-group">
+                  <label class="radio-label">
+                    <input
+                      type="radio"
+                      name="isAiGenerated"
+                      value="yes"
+                      required
+                    />
+                    Yes
+                  </label>
+                  <label class="radio-label">
+                    <input
+                      type="radio"
+                      name="isAiGenerated"
+                      value="no"
+                      required
+                    />
+                    No
+                  </label>
+                </div>
                 <span class="error-message" id="aiGeneratedError"></span>
               </div>
             </div>

@@ -19,31 +19,31 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "The Witcher",
       artist: "@artist123",
       likes: "12k",
-      description: "Digital Art",
+      image: "assets/images/artworks/witcher-portrait.jpg",
     },
     {
       title: "Spirited Away",
       artist: "@artist123",
       likes: "15k",
-      description: "Fan Art",
+      image: "assets/images/artworks/spirited.jpg",
     },
     {
       title: "Star Wars",
       artist: "@artist123",
       likes: "18k",
-      description: "Digital Painting",
+      image: "assets/images/artworks/starwars.jpg",
     },
     {
       title: "Avatar: The Last Airbender",
       artist: "@artist123",
       likes: "10k",
-      description: "Character Design",
+      image: "assets/images/artworks/avatar.jpg",
     },
     {
       title: "Harry Potter",
       artist: "@artist123",
       likes: "11k",
-      description: "Fantasy Art",
+      image: "assets/images/artworks/harrypotter.jpg",
     },
   ];
 
@@ -52,9 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function createArtworkCard(artwork) {
     return `
             <div class="artwork-card">
-                <div class="artwork-placeholder">
-                    <div class="placeholder-text">${artwork.description}</div>
-                </div>
+                <img src="${artwork.image}" alt="${artwork.title}" />
                 <div class="artwork-info">
                     <h3>${artwork.title}</h3>
                     <p>Illustration by ${artwork.artist}</p>
