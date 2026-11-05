@@ -46,9 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Update content
     slideContent.querySelector("h1").textContent = slide.title;
-    slideContent.querySelector(
-      ".artist"
-    ).textContent = `Art by ${slide.artist}`;
+    slideContent.querySelector(".artist").textContent =
+      `Art by ${slide.artist}`;
 
     // Update active slide indicator
     document.querySelectorAll(".dot").forEach((dot, index) => {
@@ -72,6 +71,11 @@ document.addEventListener("DOMContentLoaded", () => {
   slides.forEach((_, index) => {
     const dot = document.createElement("button");
     dot.className = `dot ${index === 0 ? "active" : ""}`;
+    dot.type = "button";
+    dot.setAttribute(
+      "aria-label",
+      `Show artwork ${index + 1} of ${slides.length}`,
+    );
     dot.addEventListener("click", () => {
       currentSlide = index;
       updateSlide();

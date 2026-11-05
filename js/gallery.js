@@ -29,7 +29,8 @@ document.addEventListener("DOMContentLoaded", () => {
       image: "../assets/images/artworks/ff7.jpg",
       likes: "6.5k",
       views: "11.5k",
-      description: "The heroes of Final Fantasy VII Remake gather before the sprawling city of Midgar.",
+      description:
+        "The heroes of Final Fantasy VII Remake gather before the sprawling city of Midgar.",
       tags: ["Digital Art", "Gaming", "Fan Art"],
     },
     {
@@ -65,14 +66,14 @@ document.addEventListener("DOMContentLoaded", () => {
     return items
       .map(
         (item) => `
-            <div class="gallery-item" data-id="${item.id}">
+            <button type="button" class="gallery-item" data-id="${item.id}">
                 <img src="${item.image}" alt="${item.title}">
-                <div class="gallery-item-info">
-                    <h3>${item.title}</h3>
-                    <p>by ${item.artist}</p>
-                </div>
-            </div>
-        `
+                <span class="gallery-item-info">
+                    <span class="gallery-item-title">${item.title}</span>
+                    <span class="gallery-item-artist">by ${item.artist}</span>
+                </span>
+            </button>
+        `,
       )
       .join("");
   }
@@ -94,8 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
     modalTitle.textContent = artwork.title;
     modalArtist.textContent = `by ${artwork.artist}`;
     modalStats.innerHTML = `
-            <span class="likes">❤ ${artwork.likes} likes</span>
-            <span class="views">👁 ${artwork.views} views</span>
+            <span class="likes">${artwork.likes} likes</span>
+            <span class="views">${artwork.views} views</span>
         `;
     modalDescription.textContent = artwork.description;
     modalTags.innerHTML = artwork.tags

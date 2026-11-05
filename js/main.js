@@ -2,15 +2,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
   const navMenu = document.querySelector(".nav-menu");
 
+  function setMenuOpen(isOpen) {
+    navMenu.classList.toggle("active", isOpen);
+    navToggle.classList.toggle("active", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+    navToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  }
+
   navToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("active");
-    navToggle.classList.toggle("active");
+    setMenuOpen(!navMenu.classList.contains("active"));
   });
 
   document.addEventListener("click", (e) => {
     if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-      navMenu.classList.remove("active");
-      navToggle.classList.remove("active");
+      setMenuOpen(false);
     }
   });
 
